@@ -3,9 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <meta name="description" content="A colorful little guide to flower names.">
+    <title>Flower Garden</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #322c31;
+            --muted: #71666e;
+            --green: #355b45;
+            --paper: #fffaf5;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .welcome {
+            padding: 18px 20px;
+            background: var(--green);
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-align: center;
+        }
+
+        main {
+            width: min(1050px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 58px 0 64px;
+        }
+
+        .intro {
+            margin: 0 auto 34px;
+            max-width: 620px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            margin: 0 0 10px;
+            color: #a35b73;
+            font-family: Arial, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.4rem, 7vw, 4.5rem);
+            font-weight: 500;
+            letter-spacing: -0.04em;
+        }
+
+        .intro p:last-child {
+            margin: 14px 0 0;
+            color: var(--muted);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .flowers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 18px;
+        }
+
+        .flower {
+            min-height: 190px;
+            padding: 24px 18px;
+            border: 1px solid #efe5dc;
+            border-radius: 18px;
+            background: white;
+            text-align: center;
+            box-shadow: 0 8px 24px rgb(65 45 45 / 5%);
+        }
+
+        .flower-icon {
+            display: block;
+            margin-bottom: 12px;
+            font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+            font-size: 2.8rem;
+        }
+
+        .flower h2 {
+            margin: 0 0 7px;
+            font-size: 1.35rem;
+            font-weight: 600;
+        }
+
+        .flower p {
+            margin: 0;
+            color: var(--muted);
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            padding: 20px;
+            color: var(--muted);
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding-top: 40px;
+            }
+
+            .flowers {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .flower {
+                min-height: 175px;
+                padding: 20px 12px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>HELLO THIS IS MY FIRST WEBSITE</h1>
+    <header class="welcome">Welcome from SAMIUL ALAM ANIK</header>
+    <main>
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">A little garden of favorites</p>
+            <h1 id="page-title">Flowers in bloom</h1>
+            <p>Discover the names of some much-loved flowers and enjoy a little color from the garden.</p>
+        </section>
+
+        <section class="flowers" aria-label="Flower names">
+            <article class="flower">
+                <span class="flower-icon" aria-hidden="true">🌹</span>
+                <h2>Rose</h2>
+                <p>A classic bloom known for its layered petals and lovely fragrance.</p>
+            </article>
+            <article class="flower">
+                <span class="flower-icon" aria-hidden="true">🌷</span>
+                <h2>Tulip</h2>
+                <p>A bright, cup-shaped flower that welcomes the arrival of spring.</p>
+            </article>
+            <article class="flower">
+                <span class="flower-icon" aria-hidden="true">🌻</span>
+                <h2>Sunflower</h2>
+                <p>A cheerful golden flower that turns its face toward the sun.</p>
+            </article>
+            <article class="flower">
+                <span class="flower-icon" aria-hidden="true">🌼</span>
+                <h2>Daisy</h2>
+                <p>A simple, sunny flower with a bright center and delicate petals.</p>
+            </article>
+            <article class="flower">
+                <span class="flower-icon" aria-hidden="true">🪷</span>
+                <h2>Lotus</h2>
+                <p>An elegant water flower with broad petals and a peaceful presence.</p>
+            </article>
+            <article class="flower">
+                <span class="flower-icon" aria-hidden="true">🌺</span>
+                <h2>Hibiscus</h2>
+                <p>A bold tropical flower with large, colorful petals.</p>
+            </article>
+        </section>
+    </main>
+    <footer>Thanks for visiting the flower garden.</footer>
 </body>
 </html>
